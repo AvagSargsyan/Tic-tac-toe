@@ -3,7 +3,9 @@ const resultText = document.createElement('div');
 const infoText = document.querySelector('.game-info');
 const playerTurn = document.querySelector('.player-turn');
 const playAgain = document.createElement('button');
-playAgain.innerText = 'Play again';
+playAgain.innerText = 'Restart';
+playAgain.classList.add('play-again-btn');
+infoText.append(playAgain);
 
 let board = [[], [], []];
 let emptyFields = 9;
@@ -22,16 +24,18 @@ fields.forEach(field => {
                 board[i][j] = player;
                 field.innerText = player;
                 if (checkWinner(player, board, emptyFields) === player) {
-                    resultText.innerText = `Player ${player} won the game!`;
+                    resultText.innerText = `Player ${player.toUpperCase()} won the game!`;
                     infoText.append(resultText);
                     gameOver = true;
                     infoText.append(playAgain);
+                    playAgain.innerText = 'Play again';
                     playerTurn.innerText = '';
                 } else if (checkWinner(player, board, emptyFields) === 'tie') {
                     resultText.innerText = `It's a tie!`;
                     infoText.append(resultText);
                     gameOver = true;
                     infoText.append(playAgain);
+                    playAgain.innerText = 'Play again';
                     playerTurn.innerText = '';
                 }
                 if (!gameOver) {
@@ -72,3 +76,16 @@ function checkWinner(player, board, emptyFields) {
         return 'tie';
     }
 }
+
+playAgain.addEventListener('click', e => {
+    board = [[], [], []];
+    emptyFields = 9;
+    gameOver = false;
+    player = 'x';
+    resultText.remove();
+    fields.forEach(field => {
+        field.innerText = '';
+    })
+    playerTurn.innerText = 'Player X\'s turn';
+    playAgain.innerText = 'Restart';
+});
