@@ -18,7 +18,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(238, 239, 240);
+    background-color: lightblue;
 }
 
 .wrapper {
@@ -29,7 +29,7 @@ body {
     justify-items: center;
 }
 
-.wrapper > h1 {
+.wrapper>h1 {
     margin-top: 1rem;
     font-size: 2.6rem;
     transform: scale(1.1, 1);
@@ -51,25 +51,24 @@ body {
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
-.board > div {
+.board>div {
     border: 1px solid var(--main-border-color);
     background-color: var(--main-bg-color);
     font-size: 7rem;
     display: grid;
     align-content: center;
-    padding: 0 2.6rem .8rem 2.6rem;
     height: 8rem;
     width: 8rem;
 }
 
-.board > div:hover {
+.board>div:hover {
     background-color: var(--main-hover-color);
 }
 
 .play-again-btn {
     /* color: white; */
     background-color: var(--main-bg-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     padding: .6rem 1.2rem;
     margin: 1rem 0;
@@ -85,7 +84,7 @@ body {
     background-color: #bbb;
 }
 
-.game-info > div {
+.game-info>div {
     font-size: 1.3rem;
     padding: .2rem 0;
 }
@@ -94,4 +93,32 @@ body {
     display: flex;
     align-items: center;
     gap: .2rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .board>div {
+        font-size: 5rem;
+        padding: 0 .6rem .8rem .6rem;
+        height: 6rem;
+        width: 6rem;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+
+    .board>div {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .footer {
+        font-size: .8rem;
+    }
+
 }

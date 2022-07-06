@@ -31,7 +31,7 @@ fields.forEach(field => {
                     playAgain.innerText = 'Play again';
                     playerTurn.innerText = '';
                 } else if (checkWinner(player, board, emptyFields) === 'tie') {
-                    resultText.innerText = `It's a tie!`;
+                    resultText.innerText = `It's a draw!`;
                     infoText.append(resultText);
                     gameOver = true;
                     infoText.append(playAgain);
