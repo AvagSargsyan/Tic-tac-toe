@@ -4,4 +4,4 @@
   This project is created by [me](https://github.com/AvagSargsyan) during [The Odin Project](https://www.theodinproject.com/) Full stack developer curriculum.
   The design is also created by me.
 ## Links
-  You can play [here](#).
+  You can play [here](https://avagsargsyan.github.io/Tic-tac-toe/).
