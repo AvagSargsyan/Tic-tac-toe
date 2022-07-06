@@ -57,6 +57,7 @@ body {
     font-size: 7rem;
     display: grid;
     align-content: center;
+    padding-bottom: 1.2rem;
     height: 8rem;
     width: 8rem;
 }
@@ -66,7 +67,6 @@ body {
 }
 
 .play-again-btn {
-    /* color: white; */
     background-color: var(--main-bg-color);
     font-size: 1.3rem;
     font-weight: bold;
